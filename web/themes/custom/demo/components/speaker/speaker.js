@@ -1,20 +1,21 @@
 
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#speaker-splide', {
+      type   : 'loop',
+      perPage: 4,
+      gap    : '20px',
+      autoplay: true,
+      pagination: false,
+      breakpoints: {
+        768: { perPage: 1 },
+        1024: { perPage: 2 },
+      },
+    }).mount();
+  });
   (function (Drupal) {
     Drupal.behaviors.speakerModal = {
       attach: function (context, settings) {
-        document.addEventListener('DOMContentLoaded', function () {
-            new Splide('#speaker-splide', {
-              type   : 'loop',
-              perPage: 4,
-              gap    : '20px',
-              autoplay: true,
-              pagination: false,
-              breakpoints: {
-                768: { perPage: 1 },
-                1024: { perPage: 2 },
-              },
-            }).mount();
-          });
+       
         // Select all speaker elements once the DOM is fully loaded.
         const speakers = context.querySelectorAll('.speaker-block');
         
