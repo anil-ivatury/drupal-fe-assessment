@@ -1,0 +1,50 @@
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+{{page.header}}
+ 
+
+    <div class="logo me-auto">
+      {{page.site_branding}}
+    </div>
+    <div id="navbar" class="navbar">
+      {{page.nav_main}}
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </div>
+
+  </div>
+</header>
+{{ page.primary_menu }}
+  {{ page.secondary_menu }}
+
+  {{ page.breadcrumb }}
+
+
+
+  {{ page.help }}
+<main id="main" class="container">
+ <div class="highlighted  navbar">{{ page.highlighted }}</div>
+{{page.content}}
+</main>
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+       
+
+        <div class="col-lg-12 ">
+          {{page.footer}}
+        </div>
+
+       
+
+   
+      </div>
+    </div>
+  </div>
+
+
+</footer>
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

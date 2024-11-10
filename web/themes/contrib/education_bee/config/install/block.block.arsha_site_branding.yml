@@ -1,0 +1,25 @@
+uuid: 37855eef-adfa-4051-9db9-dfec02e03d15
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - arsha
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: arsha_site_branding
+theme: arsha
+region: site_branding
+weight: -8
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

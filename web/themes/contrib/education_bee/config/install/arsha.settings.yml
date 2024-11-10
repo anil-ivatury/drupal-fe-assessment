@@ -1,0 +1,41 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 1
+favicon:
+  use_default: 1
+footer_copyright: ' © Copyright Ashutosh Ahirwal. All Rights Reserved'
+arrow_up: left
+show_information_icon: 1
+address: 'A108 Adam Street New York, NY 535022 United States '
+contact: njdfvjdnfvjn
+mail_id: test@gmail.com
+show_social_icon: 1
+facebook_url: 'https://www.google.com/'
+twitter_url: 'https://www.google.com/'
+linkedin_url: 'https://www.google.com/'
+instagram_url: 'https://www.google.com/'
+youtube_url: 'https://www.google.com/'
+banner_display: 1
+bg_image: {  }
+banner_title: 'Better Solutions For Your Business'
+banner_description: 'We are team of talented designers making websites with Bootstrap'
+no_of_card: '1'
+card1_icon: ''
+card1_title: ''
+card1_url: ''
+card2_icon: ''
+card2_title: ''
+card2_url: ''
+card3_icon: ''
+card3_title: ''
+card3_url: ''
+card4_icon: ''
+card4_title: ''
+card4_url: ''
+card5_icon: ''
+card5_title: ''
+card5_url: ''

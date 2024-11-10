@@ -1,0 +1,8 @@
+name: 'My Demo Theme'
+type: theme
+description: 'A custom theme with Bootstrap integration.'
+core_version_requirement: ^10
+base theme: stable9
+libraries:
+  - demo/global-styling
+  - demo/speaker

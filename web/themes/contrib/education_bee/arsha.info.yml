@@ -1,0 +1,27 @@
+name: arsha
+type: theme
+description: 'Arsha'
+core_version_requirement: ^9.4 || ^10
+preprocess: true
+'base theme': stable9
+
+libraries:
+  - arsha/global-styling
+
+regions:
+  header: Header
+  site_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer_top: Footer Top
+  footer1: Footer1
+  footer2: Footer2
+  footer3: Footer3
+  footer4: Footer4
+# Information added by Drupal.org packaging script on 2024-02-12
+version: '1.0.1'
+project: 'education_bee'
+datestamp: 1707732189

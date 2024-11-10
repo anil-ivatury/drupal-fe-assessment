@@ -1,0 +1,84 @@
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <div class="logo me-auto">
+      {{page.site_branding}}
+    </div>
+    <div id="navbar" class="navbar">
+      {{page.nav_main}}
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </div>
+
+  </div>
+</header>
+{% if is_front %}
+<section id="hero" class="d-flex align-items-center">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+        <h1>{{banner_title}}</h1>
+        <h2>{{banner_description}}</h2>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+        <img src="{{banner_bg_img}}" class="img-fluid animated" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+<main id="main" class="container">
+{{page.content}}
+</main>
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          {{page.footer1}}
+          {% if show_information_icon %}
+            <div class="contact-info">
+              <span>{{address}}</span><br>
+              <strong>Phone: </strong>{{contact}}<br>
+              <strong>Email: </strong>{{mail_id}}<br>
+            </div>
+            &#160;
+          {% endif %}
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          {{page.footer2}}
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          {{page.footer3}}
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          {{page.footer4}}
+          {% if show_social_icon %}
+            <div class="social-links mt-3">
+              <h2>Our Social Networks</h2>
+              <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+              {% if twitter_url %} <a href="{{twitter_url}}" class="twitter"><i class="bx bxl-twitter"></i></a>{% endif %}
+              {% if facebook_url %} <a href="{{facebook_url}}" class="facebook"><i class="bx bxl-facebook"></i></a>{% endif %}
+              {% if instagram_url %} <a href="{{instagram_url}}" class="instagram"><i class="bx bxl-instagram"></i></a>{% endif %}
+              {% if youtube_url %} <a href="{{youtube_url}}" class="google-plus"><i class="bx bxl-youtube"></i></a>{% endif %}
+              {% if linkedin_url %} <a href="{{linkedin_url}}" class="linkedin"><i class="bx bxl-linkedin"></i></a>{% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom clearfix">
+    <div class="copyright">
+      {{footer_copyright}}
+    </div>
+  </div>
+</footer>
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

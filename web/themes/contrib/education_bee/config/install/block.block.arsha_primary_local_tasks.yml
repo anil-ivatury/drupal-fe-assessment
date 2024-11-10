@@ -1,0 +1,22 @@
+uuid: 74fc36e9-106a-480b-828d-b32631045d0c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - arsha
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: arsha_primary_local_tasks
+theme: arsha
+region: content
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

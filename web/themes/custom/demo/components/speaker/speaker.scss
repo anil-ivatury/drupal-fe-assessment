@@ -1,0 +1,216 @@
+// Define mixins for common styles
+$primary-color: #007bff;
+$secondary-color: #666;
+$text-color-dark: #333;
+$background-color: #fff;
+$text-greycolor: #6b6b6b;
+$box-shadow-color: 4px 10px 24px 0px rgba(0, 0, 0, 0.1);
+
+// Font family and weights
+$font-family: "Metropolis", sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-medium-600: 600;
+$font-weight-bold: 700;
+
+// Font sizes
+$font-size-xtra-large: 36px;
+$font-size-large: 24px;
+$font-size-medium: 18px;
+$font-size-small: 16px;
+$font-size-xsmall: 14px;
+
+// Spacing and sizes
+$padding-small: 10px;
+$padding-medium: 20px;
+$button-border-radius: 5px;
+$card-border-radius: 8px;
+$transition-speed: 0.3s;
+$icon-size: 24px;
+$modal-background-color: #fff;
+$modal-text-color: #333;
+$modal-border-radius: 8px;
+$modal-shadow-color: rgba(0, 0, 0, 0.1);
+$close-icon-color: #666;
+$icon-size: 20px;
+$font-weight-bold: 700;
+$font-weight-regular: 400;
+$font-size-title: 18px;
+$font-size-position: 16px;
+$font-size-company: 14px;
+$font-size-bio: 14px;
+$padding-medium: 20px;
+
+.modal1 {
+  display: none;
+  /* Other styling for the modal */
+}
+.modal1.show {
+  display: flex;
+  /* More styling for visible state */
+}
+.close-modal {
+  cursor: pointer;
+  /* Additional styling for close button */
+}
+.featured-speakers {
+  font-family: $font-family;
+  font-weight: $font-weight-regular;
+  text-align: center;
+  &__title {
+    font-weight: $font-weight-bold;
+    line-height: 14px;
+    font-size: $font-size-xtra-large;
+  }
+  &__description {
+    font-weight: $font-weight-regular;
+    line-height: 18px;
+  }
+  &__carousel {
+    margin-top: 64px;
+    .splide__arrow {
+      border: 1px solid rgba(218, 218, 218, 1);
+      background: $background-color;
+    }
+    .splide__arrow--prev {
+      left: -3em;
+    }
+    .splide__arrow--next {
+      right: -3em;
+    }
+
+    .speaker-card {
+      padding: 36px 0;
+      box-shadow: $box-shadow-color;
+      &__name {
+        font-size: $font-size-large;
+        font-weight: $font-weight-bold;
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+      &__position {
+        font-size: $font-size-medium;
+        font-weight: $font-weight-medium-600;
+        margin-bottom: 0;
+        line-height: 15px;
+      }
+      &__company {
+        font-size: $font-size-medium;
+
+        margin-top: 0;
+        color: $text-greycolor;
+      }
+    }
+  }
+  &__footertext {
+    position: absolute;
+    width: 145px;
+    top: 13px;
+    left: 363px;
+    line-height: 19px;
+  }
+  &__arrow {
+    height: 51px;
+    background: no-repeat url(../speaker/images/arrow.png);
+    position: absolute;
+    left: 444px;
+    width: 138px;
+    top: 49px;
+    text-indent: -9999px;
+  }
+  &__footer {
+    margin-top: 50px;
+    position: relative;
+
+    a {
+      background: rgba(0, 63, 180, 1);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 60px;
+      border-radius: 5px;
+      &:hover {
+        background: rgba(0, 63, 180, 1);
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Modal styling in BEM
+.speaker-card-model {
+  background-color: $modal-background-color;
+  color: $modal-text-color;
+  padding: $padding-medium;
+  border-radius: $modal-border-radius;
+  box-shadow: 0px 4px 10px $modal-shadow-color;
+  margin-bottom: 20px;
+  align-items: center;
+
+  position: relative;
+
+  &__image {
+    margin-right: $padding-medium;
+  }
+
+  &__name {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  &__position {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-medium-600;
+    margin-bottom: 0;
+    line-height: 15px;
+  }
+
+  &__company {
+    font-size: $font-size-company;
+    font-weight: $font-weight-regular;
+    color: $close-icon-color;
+    margin: 0;
+  }
+
+  &__social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: $padding-medium;
+
+    &__icon {
+      width: $icon-size;
+      height: $icon-size;
+    }
+
+    &__icon--twitter,
+    &__icon--drupal,
+    &__icon--linkedin {
+      width: $icon-size;
+      height: $icon-size;
+    }
+  }
+
+  &__bio {
+    font-size: $font-size-bio;
+    font-weight: $font-weight-regular;
+    color: $modal-text-color;
+    text-align: left;
+    margin-left: 20px;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: $close-icon-color;
+  font-size: 24px;
+  cursor: pointer;
+}
+.speaker-card-second {
+  width: 70%;
+  text-align: left;
+  border-right: 1px solid rgba(183, 183, 183, 1);
+}

@@ -1,0 +1,89 @@
+{# speaker.html.twig #} 
+{{ attach_library('demo/speaker') }}
+<section class="featured-speakers">
+    {% if title %}
+    <p class="featured-speakers__description">{{ title }}</p>
+    {% endif %} 
+    {% if content.field_speaker_s %}
+    <div class="featured-speakers__carousel">
+      <div class="modal1 speaker-card-model">
+            <span id="close_model" class="close-modal">×</span>
+            <img class="modal-image speaker-card-model__image" src="" alt="Speaker Image" />
+            <div class="speaker-card-second">
+            <h3 class="modal-name speaker-card-model__name"></h3>
+            <p class="modal-title speaker-card-model__position"></p>
+            <p class="modal-company speaker-card-model__company"></p>
+            <div class="speaker-card-model__social-icons">
+                <a class="drupal-link speaker-card-model__icon speaker-card__icon--twitter" href=""> <img class="drupal-img" src="{{ active_theme_path()|render }}/components/speaker/images/drupal-icon.png" alt="Drupal icon" /></a>
+                <a class="x-link speaker-card__icon speaker-card-model__icon--drupal" href=""> <img class="drupal-img" src="{{ active_theme_path()|render }}/components/speaker/images/x-icon.png" alt="X icon" /></a>
+                <a class="linkedin-link speaker-card__icon speaker-card-model__icon--linkedin" href=""> <img class="drupal-img" src="{{ active_theme_path()|render }}/components/speaker/images/linkedin-icon.png" alt="Linkedin icon" /></a>
+            </div>
+            </diV>
+            <div class="modal-bio speaker-card-model__bio"></div>
+        </div>
+        <div class="speaker-block-wrapper">
+            <div class="splide" id="speaker-splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        {% for speaker in content.field_speaker_s['#items'] %} 
+                        {% set name = speaker.entity.field_name.value %} 
+                        {% set desg = speaker.entity.field_designation.value %}
+                        {% set org = speaker.entity.field_organization.value %} 
+                        {% set bio = speaker.entity.field_bio.value %} 
+                        {% set drupal_link = '' %} 
+                        {% if speaker.entity.field_social_link_drupal is defined %} 
+                        {% for item in speaker.entity.field_social_link_drupal %} 
+                        {% set drupal_link = drupal_link ~ item.uri ~ ',' %} 
+                        {% endfor %} 
+                        {% endif %} 
+                        {% set drupal_link = drupal_link|trim(',') %} 
+                        {% set x_link = '' %} 
+                        {% if speaker.entity.field_social_link_x is defined %} 
+                        {% for item in speaker.entity.field_social_link_x %} 
+                        {% set x_link = x_link ~ item.uri ~ ',' %} 
+                        {% endfor %}
+                        {% endif %} 
+                        {% set x_link = x_link|trim(',') %} 
+                        {% set linkedin_link = '' %} 
+                        {% if speaker.entity.field_social_link_linkedin is defined %} 
+                        {% for item in speaker.entity.field_social_link_linkedin %} 
+                        {% set linkedin_link = linkedin_link ~ item.uri ~ ',' %} 
+                        {% endfor %} 
+                        {% endif %} 
+                        {% set linkedin_link = linkedin_link|trim(',') %} 
+                        {% set photo = file_url(speaker.entity.field_photo.entity.field_media_image.entity.uri.value) %}
+                        <li class="splide__slide">
+                             <div class="speaker-block speaker-card text-center" data-photo={{ photo }} data-name="{{ name }}" data-desg="{{ desg }}" data-org="{{ org }}" data-bio="{{ bio }}" data-drupal="{{ drupal_link }}" data-x="{{ x_link }}" data-linkedin="{{ linkedin_link }}">
+                                <div class="speaker-image">
+                                    {% if speaker.entity.field_photo.entity is not empty %}
+                                    <img class="speaker-card__image" src="{{ photo }}" alt="{{ name }}">
+                                    {% endif %}
+                                </div>
+                                <h3 class="speaker-card__name">
+                                  {{ name }}
+                                 </h3>
+                                <p class="speaker-card__position">
+                                    {{ desg }}
+                                </p>
+                                <p class="speaker-card__company">
+                                    {{ org }}
+                                </p>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <div class="featured-speakers__footer">
+        {% if footer_text %}
+        <div class="featured-speakers__footertext">{{ footer_text }}</div>
+         <div class="featured-speakers__arrow">arrow</div>
+        {% endif %} 
+        {% if cta %}
+        <div class="featured-speakers__program-button">{{ cta }}</div>
+        {% endif %}
+    </div>
+</section>
