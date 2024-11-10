@@ -1,0 +1,19 @@
+uuid: 2c74efaf-74b6-4650-9da0-5f70a92a55f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_social_link_drupal
+field_name: field_social_link_drupal
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
